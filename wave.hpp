@@ -8,7 +8,7 @@ public:
     const short bits = 16; // Quantization precision
     const short chs = 2; // Number of channels
     int size; // Length of sound wave array at each channel
-    double** s; // Sound arraies, s[0]:left, s[1]:right
+    double** s; // Sound arraies, s[0]:right, s[1]:left
     wave(const double sec)
     {
         this->size = sec * this->fs;
