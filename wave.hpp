@@ -5,8 +5,8 @@ class wave
 {
 public:
     const long fs = 44100; // Sampling rate
-	const short bits = 16; // Quantization precision
-	const short chs = 2; // Number of channels
+    const short bits = 16; // Quantization precision
+    const short chs = 2; // Number of channels
     int size; // Length of sound wave array at each channel
     double** s; // Sound arraies, s[0]:left, s[1]:right
     wave(const double sec)
