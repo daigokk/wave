@@ -64,8 +64,7 @@ public:
         {
             for (int ch = 0; ch < this->chs; ch++)
             {
-                double _s;
-                _s = this->s[ch][n];
+                double _s = this->s[ch][n];
                 if (_s > 1) // Clipping (Limit the absolute value to be 1)
                 {
                     _s = 1;
