@@ -66,7 +66,7 @@ public:
             {
                 double _s;
                 _s = this->s[ch][n];
-                if (_s > 1) // Clipping (Limit the absolute value, this time set to 1)
+                if (_s > 1) // Clipping (Limit the absolute value to be 1)
                 {
                     _s = 1;
                 }
