@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-class pcm
+class wave
 {
 public:
     const long fs = 44100; // Sampling rate
@@ -9,7 +9,7 @@ public:
 	const short chs = 2; // Number of channels
     int size; // Length of sound wave array at each channel
     double** s; // Sound arraies, s[0]:left, s[1]:right
-    pcm(const double sec)
+    wave(const double sec)
     {
         this->size = sec * this->fs;
         this->s = (double**)calloc(this->chs, sizeof(double**));
@@ -18,7 +18,7 @@ public:
             this->s[ch] = (double*)calloc(this->size, sizeof(double));
         }
     }
-    ~pcm()
+    ~wave()
     {
         for (int ch = 0; ch < this->chs; ch++)
         {
