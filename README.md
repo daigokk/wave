@@ -1,5 +1,5 @@
 # wave
-Welcome to C++ library for making wave file.
+Welcome to C++ pure header library for making wave file.
 
 ## Usage
 
