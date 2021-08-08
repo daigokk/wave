@@ -4,7 +4,7 @@
 class wave
 {
 public:
-    static struct
+    struct
     {
         double C4 = 261.626;//do
         double D4 = 293.665;//re
