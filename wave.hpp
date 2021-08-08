@@ -4,20 +4,20 @@
 class wave
 {
 public:
-    static const struct
+    static struct
     {
-        double C4 = 261.626;//do
-        double D4 = 293.665;//re
-        double E4 = 329.628;//mi
-        double F4 = 349.228;//fa
-        double G4 = 391.995;//sol
-        double A4 = 440.000;//la
-        double B4 = 493.883;//si
-        double C5 = 523.251;//do
-        double D5 = 587.330;//re
-        double E5 = 659.255;//mi
-        double F5 = 698.456;//fa
-        double G5 = 783.991;//sol
+        const double C4 = 261.626;//do
+        const double D4 = 293.665;//re
+        const double E4 = 329.628;//mi
+        const double F4 = 349.228;//fa
+        const double G4 = 391.995;//sol
+        const double A4 = 440.000;//la
+        const double B4 = 493.883;//si
+        const double C5 = 523.251;//do
+        const double D5 = 587.330;//re
+        const double E5 = 659.255;//mi
+        const double F5 = 698.456;//fa
+        const double G5 = 783.991;//sol
     } scale;
     
 public:
