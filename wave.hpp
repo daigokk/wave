@@ -4,7 +4,7 @@
 class wave
 {
 public:
-    struct
+    static struct
     {
         double C4 = 261.626;//do
         double D4 = 293.665;//re
@@ -19,7 +19,6 @@ public:
         double F5 = 698.456;//fa
         double G5 = 783.991;//sol
     } scale;
-    
 public:
     const long fs = 44100; // Sampling rate
     const short bits = 16; // Quantization precision
