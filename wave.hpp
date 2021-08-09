@@ -2,29 +2,14 @@
 #include <stdlib.h>
 #include <math.h>
 
-const struct
-{
-    double C4 = 261.626;//do
-    double D4 = 293.665;//re
-    double E4 = 329.628;//mi
-    double F4 = 349.228;//fa
-    double G4 = 391.995;//sol
-    double A4 = 440.000;//la
-    double B4 = 493.883;//si
-    double C5 = 523.251;//do
-    double D5 = 587.330;//re
-    double E5 = 659.255;//mi
-    double F5 = 698.456;//fa
-    double G5 = 783.991;//sol
-} scale;
-
 class wave
 {
 public:
     const long fs = 44100; // Sampling rate
     const short bits = 16; // Quantization precision
     const short chs = 2; // Number of channels
-    int size; // Length of sound wave array at each channel
+    size_t size; // Length of sound wave array at each channel
+    size_t currentIndex = 0;
     double** s; // Sound arraies, s[0]:right, s[1]:left
     wave(const double sec)
     {
@@ -96,4 +81,21 @@ public:
         }
         fclose(fp);
     }
+};
+
+class scale
+{
+public:
+    constexpr static  double C4 = 261.626;//do
+    constexpr static  double D4 = 293.665;//re
+    constexpr static  double E4 = 329.628;//mi
+    constexpr static  double F4 = 349.228;//fa
+    constexpr static  double G4 = 391.995;//sol
+    constexpr static  double A4 = 440.000;//la
+    constexpr static  double B4 = 493.883;//si
+    constexpr static  double C5 = 523.251;//do
+    constexpr static  double D5 = 587.330;//re
+    constexpr static  double E5 = 659.255;//mi
+    constexpr static  double F5 = 698.456;//fa
+    constexpr static  double G5 = 783.991;//sol
 };
