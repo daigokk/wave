@@ -1,6 +1,7 @@
 #include "wave.hpp"
 #include <math.h>
 #define PI acos(-1)
+
 int main(void)
 {
     wave pcm(10);
